@@ -7,6 +7,7 @@ public class Main {
 		
 		// 도미노 핏자
 		
+		
 
 	}
 
