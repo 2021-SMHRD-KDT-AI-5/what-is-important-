@@ -1,26 +1,48 @@
-<!DOCTYPE HTML>
+body {
+   padding-top: 3.25em;
+}
+
+
+#nav {
+   position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      background-image: url("images/overlay.png");
+      width: 100%;
+      height: 3.25em;
+      line-height: 3.25em;
+      text-align: center;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font<!DOCTYPE HTML>
 <!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   Aerial by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Aerial by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-		
-	</head>
-	<body class="is-preload">
-		
-		<div id="page-wrapper">
-			<div id="bg"></div>
-			
-		<!-- Nav -->
-			 <nav id="nav">
+
+<head>
+   <title>Aerial by HTML5 UP</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+   <link rel="stylesheet" href="assets/css/main.css" />
+   <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+   </noscript>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+</head>
+
+<body class="is-preload">
+
+   <div id="page-wrapper">
+      <div id="bg"></div>
+
+      <!-- Nav -->
+      <nav id="nav">
          <ul class="navbar_menu">
             <li class="current"><a href="index.html">Home</a></li>
             <li>
@@ -47,55 +69,195 @@
 
 
          <ul class="navbar_links">
-            <a href=""><i class="far fa-user-circle fa-2x"></i></a>
+            <li><a href="#"><i class="far fa-user-circle fa-2x"></i></a>
+               <ul class="dropotron level-0 right">
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">회원가입</a></li>
+               </ul>
+            </li>   
          </ul>
       </nav>
-			</div>
 
-			<div id="main">
-			
+   </div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>what is important?</h1>
-						<p>인기상품</p>
-						<nav>	
-							<ul>
-								<li><a href="html1.html" ><img src="png/aircon.png" width = 100 height = 100></a></li>
-								<li><a href="../html2/html2.html" ><img src="png/008-fridge.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/017-microwave oven.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/033-dish washer.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/039-washing machine.png" width = 100 height = 100></a></li>>
-							</ul>
-							<ul>
-								<li><a href="#" ><img src="png/038-vacuum cleaner.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/dry.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/sty.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/tv.png" width = 100 height = 100></a></li>
-								<li><a href="#" ><img src="png/air.png" width = 100 height = 100></a></li>
-							<ul>
-						</nav>
-					</header>
+   <div id="main">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">; <a href="http://html5up.net"></a>.</span>
-					</footer>
 
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
+      <!-- Header -->
+      <header id="header">
+         <h1>what is important?</h1>
+         <p>인기상품</p>
+         <nav>
+            <ul>
+               <li><a href="html1.html"><img src="png/aircon.png" width=100 height=100></a></li>
+               <li><a href="../html2/html2.html"><img src="png/008-fridge.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/017-microwave oven.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/033-dish washer.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/039-washing machine.png" width=100 height=100></a></li>
+            </ul>
+            <ul>
+               <li><a href="#"><img src="png/038-vacuum cleaner.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/dry.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/sty.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/tv.png" width=100 height=100></a></li>
+               <li><a href="#"><img src="png/air.png" width=100 height=100></a></li>
+               </ul>
+         </nav>
+      </header>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- Footer -->
+      <footer id="footer">
+         <span class="copyright"> <a href="http://html5up.net"></a>.</span>
+      </footer>
 
-	</body>
-</html>
+   </div>
+   <script>
+      window.onload = function () { document.body.classList.remove('is-preload'); }
+      window.ontouchmove = function () { return false; }
+      window.onorientationchange = function () { document.body.scrollTop = 0; }
+   </script>
+
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/jquery.dropotron.min.js"></script>
+   <script src="assets/js/jquery.scrolly.min.js"></script>
+   <script src="assets/js/browser.min.js"></script>
+   <script src="assets/js/breakpoints.min.js"></script>
+   <script src="assets/js/util.js"></script>
+   <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>-weight: 700;
+      text-transform: uppercase;
+      cursor: default;
+      display: flex;
+      justify-content: center;
+}
+   .navbar_menu{display: flex;
+      justify-content: center;}
+   
+
+   #nav ul {
+      
+      position: absolute;
+      z-index: 1001;
+   }
+
+   #nav li {
+      display: inline-block;
+      margin: 0 0.5em 0 0.5em;
+      top: 0;
+      position: relative;
+      -moz-transition: top .15s ease-in-out;
+      -webkit-transition: top .15s ease-in-out;
+      -o-transition: top .15s ease-in-out;
+      -ms-transition: top .15s ease-in-out;
+      transition: top .15s ease-in-out;
+   }
+
+      #nav li > ul {
+         display: none;
+      }
+
+      #nav li a, #nav li span {
+         -moz-transition: background-color .075s ease-in-out, color .075s ease-in-out;
+         -webkit-transition: background-color .075s ease-in-out, color .075s ease-in-out;
+         -ms-transition: background-color .075s ease-in-out, color .075s ease-in-out;
+         transition: background-color .075s ease-in-out, color .075s ease-in-out;
+         position: relative;
+         display: block;
+         text-decoration: none;
+         color: #6b7770;
+         top: -6px;
+         padding: 6px 1.5em 0.25em 1.5em;
+         border-bottom-left-radius: 6px;
+         border-bottom-right-radius: 6px;
+         outline: 0;
+      }
+
+      #nav li:hover, #nav li.active {
+         top: 3px;
+      }
+
+      #nav li:hover a, #nav li:hover span {
+         background: #C1CAC5;
+         color: #fff;
+      }
+
+      #nav li.active a, #nav li.active span {
+         background: #C1CAC5;
+         color: #fff;
+      }
+
+      #nav li.current a {
+         background: #b1ddab;
+         color: #fff;
+      }
+      
+
+.dropotron {
+   list-style: none;
+   background: #6B7770;
+   color: #fff;
+   border-radius: 6px;
+   line-height: 2.75em;
+   text-align: center;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-weight: 700;
+   text-transform: uppercase;
+   padding: 1em 0;
+   text-align: left;
+   min-width: 14em;
+   margin-top: -1em;
+   box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.1);
+}
+
+   .dropotron li {
+      padding-left: 0;
+   }
+
+      .dropotron li > a, .dropotron li > span {
+         display: block;
+         color: #D7DAD8;
+         text-decoration: none;
+         padding: 0 1.25em;
+      }
+
+      .dropotron li:hover > a, .dropotron li:hover > span {
+         color: #fff;
+         background: #7B8780;
+      }
+
+      .dropotron li.active > a, .dropotron li.active > span {
+         color: #fff;
+         background: #7B8780;
+      }
+
+      .dropotron li:first-child {
+         border-top: 0;
+      }
+
+   .dropotron.level-0 {
+      margin-top: 1em;
+      font-size: 0.9em;
+   }
+
+      .dropotron.level-0:before {
+         content: '';
+         position: absolute;
+         left: 50%;
+         margin-left: -1em;
+         top: -0.65em;
+         border-bottom: solid 1em #6B7770;
+         border-left: solid 1em transparent;
+         border-right: solid 1em transparent;
+      }
+      .navbar_links{display: inline-block;
+      position: relative; right: 30px;}
+
+      .navbar_links{display: inline-block;
+         padding-top: 7px;
+      }
+
+      .fa-user-circle{color: #6b7770;
+         }
