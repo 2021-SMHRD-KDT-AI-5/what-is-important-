@@ -37,8 +37,8 @@ public class airconDAO {
 			e.printStackTrace();
 		}
 		
-		public MemberDTO loginCheck(String email, String pw) {
-			
-		}
+//		public airconDTO Check(String email, String pw) {
+//			
+//		}
 	}
 }
