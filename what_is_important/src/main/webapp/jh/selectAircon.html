@@ -17,6 +17,11 @@
   <link href="css/shop-homepage.css" rel="stylesheet">
 
   <style>
+  
+  .navbar_menu {
+  display: flex;
+  justify-content: center;
+}
 
   .navbar{background-color: #007bff;}
 
@@ -73,32 +78,41 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-    <div class="container">
-      <a class="navbar-brand" href="#">What is important</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav id="nav">
+         <ul class="navbar_menu">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li>
+               <a href="#">Dropdown</a>
+               <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Magna phasellus</a></li>
+                  <li>
+                     <a href="#">Phasellus consequat</a>
+                     <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Phasellus consequat</a></li>
+                        <li><a href="#">Magna phasellus</a></li>
+                        <li><a href="#">Etiam dolore nisl</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="#">Veroeros feugiat</a></li>
+               </ul>
+            </li>
+            <li><a href="left-sidebar.html">추천</a></li>
+            <li><a href="right-sidebar.html">직접선택 </a></li>
+            <li><a href="no-sidebar.html">No Sidebar</a></li>
+         </ul>
+
+
+         <ul class="navbar_links">
+            <li><a href="#"><i class="far fa-user-circle fa-2x"></i></a>
+               <ul class="dropotron level-0 right">
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">회원가입</a></li>
+               </ul>
+            </li>   
+         </ul>
+      </nav>
 
   <!-- Page Content -->
   <div class="container">
