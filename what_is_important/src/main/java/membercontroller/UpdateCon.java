@@ -39,10 +39,10 @@ public class UpdateCon extends HttpServlet {
 		if(cnt>0) {
 			//세션에도 수정된 정보를 저장
 			session.setAttribute("member", member2);
-			response.sendRedirect("index.jsp"); 
+			response.sendRedirect("html5up-aerial/index.jsp"); 
 			
 		}else {
-			response.sendRedirect("update.jsp");
+			response.sendRedirect("html5up-aerial/update.jsp");
 		}
 			
 		

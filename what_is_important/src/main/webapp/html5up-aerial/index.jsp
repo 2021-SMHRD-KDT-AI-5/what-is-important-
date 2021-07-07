@@ -63,15 +63,19 @@
 
 
          <ul class="navbar_links">
-            <li><a href="#"><i class="far fa-user-circle fa-2x"></i></a>
+            <li>
+            	<a href="#"><i class="far fa-user-circle fa-2x"></i></a>
+            		<% if(member != null){ %>
+					<h3><%=member.getId() %></h3>
+					<% } %>
                <ul class="dropotron level-0 right">
-               		<% if(member != null){ //로그인이 된 경우
-						out.print("<li><a href='update.jsp'>개인정보수정</a></li>");				
-						out.print("<li><a href='Logout.jsp'>로그아웃</a><li>");
-					}else{ 
-						out.print("<li><a href='login.jsp'>로그인</a></li>");
-						out.print("<li><a href='join.jsp'>회원가입</a></li>");
-					}%>
+               		<%if(member != null){ %> <!-- 로그인이 된 경우 -->
+						<li><a href='update.jsp'>개인정보수정</a></li>				
+						<li><a href='Logout.jsp'>로그아웃</a><li>
+					<%}else{ %>
+						<li><a href='login.jsp'>로그인</a></li>
+						<li><a href='join.jsp'>회원가입</a></li>
+					<%}%>
           		</ul>
             </li>   
          </ul>
@@ -87,7 +91,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-				<form action="LoginServiceCon.do" method="post" class="login100-form validate-form flex-sb flex-w">
+				<form action="../LoginServiceCon.do" method="post" class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-32">
 						로그인
 					</span>
@@ -139,7 +143,7 @@
                   	<div class="limiter">
 						<div class="container-login100">
 							<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-								<form action="JoinServiceCon.do" method="post" class="login100-form validate-form flex-sb flex-w">
+								<form action="../JoinServiceCon.do" method="post" class="login100-form validate-form flex-sb flex-w">
 									<span class="login100-form-title p-b-32">
 										회원가입
 									</span>
@@ -265,6 +269,8 @@
 	<script src="assetslogin/vendor/daterangepicker/daterangepicker.js"></script>
 	<script src="assetslogin/vendor/countdowntime/countdowntime.js"></script>
 	<script src="assetslogin/js/main.js"></script>
+	
+	
 	
 
 </body>

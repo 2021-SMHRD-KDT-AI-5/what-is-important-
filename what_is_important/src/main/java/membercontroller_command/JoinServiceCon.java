@@ -30,14 +30,14 @@ public class JoinServiceCon implements Command{
 			// request영역에 email정보를 저장
 			request.setAttribute("id", id);
 			
-			moveURL = "index.jsp";
+			moveURL = "html5up-aerial/join_success.jsp";
 			// forward방식
 //			RequestDispatcher dispatcher = request.getRequestDispatcher("join_success.jsp");
 //			dispatcher.forward(request, response);
 
 		} else {
 //			response.sendRedirect("main.jsp");
-			moveURL = "index.jsp";
+			moveURL = "html5up-aerial/index.jsp";
 		}	
 		return moveURL;
 	}

@@ -22,7 +22,7 @@
 	<div class="limiter">
 						<div class="container-login100">
 							<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-								<form action="JoinServiceCon.do" method="post" class="login100-form validate-form flex-sb flex-w">
+								<form action="../JoinCon" method="post"  id="MForm" class="login100-form validate-form flex-sb flex-w">
 									<span class="login100-form-title p-b-32">
 										회원가입
 									</span>
@@ -32,10 +32,11 @@
 									</span>
 									<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
 										<input class="input100" type="text" name="id" id="input_id" >
-										<input type="button" value="ID중복체크" onclick="idCheck()">
-									<span id="sp"></span>
 										<span class="focus-input100"></span>
 									</div>
+									
+									<input type="button" value="ID중복체크" onclick="idCheck()">
+									<span id="sp"></span>
 									
 									
 										
@@ -50,16 +51,6 @@
 										<span class="focus-input100"></span>
 									</div>
 									
-									<span class="txt1 p-b-11">
-										Password check
-									</span>
-									<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
-										<span class="btn-show-pass">
-											<i class="fa fa-eye"></i>
-										</span>
-										<input class="input100" type="password" name="pwcheck" >
-										<span class="focus-input100"></span>
-									</div>
 									
 									<span class="txt1 p-b-11">
 										Name
@@ -88,6 +79,10 @@
 							
 									<div class="container-login100-form-btn">
 											<input type="submit" name="JoinUs" value="JoinUs" class="login100-form-btn">
+											
+									</div>
+									<div>
+										<span id="sp1"></span></li>
 									</div>
 								</form>
 							</div>
@@ -119,9 +114,9 @@
 				    		alert(data);
 				    		document.getElementById("sp");
 				    		if(data=="true"){
-				    			sp.innerHTML="불가능한 ID입니다.";
+				    			sp.innerHTML="이미 사용 중인 ID입니다.";
 				    		}else{
-				    			sp.innerHTML="가능한 ID입니다.";
+				    			sp.innerHTML="사용 가능한 ID입니다.";
 				    		}
 				    	},
 				    	error : function(){ //요청에 실패 시 실행할 함수 정의
@@ -129,32 +124,32 @@
 				    	}
 				    });
 				}
-				//var isSubmit = false;
+				var isSubmit = false;
 				//event객체 : DOM과 관련된 이벤트 발생하명 관련 정보를 가지고 있는 객체
 				//제이쿼리 사용
-			/* 	$('#MFoem').submit(function(event){
+			 	$('#MFoem').submit(function(event){
 					//SUBMIt 처리 되는것을 막아야함
 					event.preventDefault();
 					
 					//html(),text()
-					var rId = $('#receiveEmail').val();
+					var rId = $('#input_id').val();
 					
 					
 					$.ajax({
 				    	type : "post", //데이터 전송방식
-				    	data : {'id': rId}, //서버로 보낼 데이터
+				    	data : {'id': input.value}, //서버로 보낼 데이터
 				    	//input태그에 작성한 텍스트 가져올때 .value사용
-				    	url : "IdCheckCon", //데이터를 보낼 서버페이지
+				    	url : "../IdCheckCon01", //데이터를 보낼 서버페이지
 				    	dataType : "text", //응답데이터 타입
 				    	success : function(data){ //요청에 성공 시 실행할 함수 정의 - 가능(true),불가능(false)
 				    		alert(data);
-				    		if(data=="true"){
+				    		if(data =="true"){
 				    			alert(data);
-				    			isSubmit = true;
-				    		}else{
 				    			isSubmit = false;
+				    		}else{
+				    			isSubmit = true;
 				    			alert(data);
-				    			$('#sp1').html("이메일을 확인하시오");
+				    			$('#sp1').html("ID을 확인하시오");
 				    		}
 				    	},
 				    	error : function(){ //요청에 실패 시 실행할 함수 정의
@@ -166,7 +161,7 @@
 						alert(isSubmit);
 						this.submit();
 					}
-				}) */
+				}) 
 				
 			</script>
 

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.connector.Response;
+
 public class MemberDAO {
    //접근 제한자 private 넣어주기
    private Connection conn = null;
@@ -72,9 +74,9 @@ public class MemberDAO {
          if(rs.next()) {
             //컬럼인덱스는 1부터 시작
             String getId = rs.getString(1);
-            String getName = rs.getString(4);
-            String getTel = rs.getString(5);
-            String getAddress = rs.getString(6);
+            String getName = rs.getString(3);
+            String getTel = rs.getString(4);
+            String getAddress = rs.getString(5);
          
             member = new MemberDTO(getId, null, getName, getTel, getAddress);
             }
@@ -208,9 +210,9 @@ public ArrayList<MemberDTO> select() {//모든 값을 가져오기 때문에 매개변수 필요 
            while(rs.next()) { //회원이 여러명 있으니까 반복문 사용
               //컬럼인덱스는 1부터 시작
               String getId = rs.getString(1);
-              String getName = rs.getString(4);
-              String getTel = rs.getString(5);
-              String getAddress = rs.getString(6);
+              String getName = rs.getString(3);
+              String getTel = rs.getString(4);
+              String getAddress = rs.getString(5);
            
               member = new MemberDTO(getId, null, getName, getTel, getAddress);
               list.add(member);

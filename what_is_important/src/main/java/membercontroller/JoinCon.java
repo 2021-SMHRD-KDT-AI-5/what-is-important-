@@ -42,13 +42,16 @@ public class JoinCon extends HttpServlet {
 				request.setAttribute("id", id);
 				
 				//forward방식
-				RequestDispatcher dispatcher 
-						= request.getRequestDispatcher("join_success.jsp");
-				dispatcher.forward(request, response);
+//				RequestDispatcher dispatcher 
+//						= request.getRequestDispatcher("html5up-aerial/join_success.jsp");
+//				dispatcher.forward(request, response);
+				 response.sendRedirect("html5up-aerial/join_success.jsp");
+				 System.out.println("가입성공");
 				
 				
 			 }else{
-				 response.sendRedirect("index.jsp");
+				 response.sendRedirect("html5up-aerial/index.jsp");
+				 System.out.println("가입실패");
 			 }
 				
 		

@@ -1,1 +1,1 @@
-select*from web_member;
+select*from member;

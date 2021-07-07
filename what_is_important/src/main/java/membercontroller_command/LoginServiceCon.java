@@ -29,10 +29,10 @@ public class LoginServiceCon implements Command{
 			session.setAttribute("member", member);
 
 			System.out.println("로그인 성공");
-			moveURL = "index.jsp";
+			moveURL = "html5up-aerial/index.jsp";
 		} else {
 			System.out.println("로그인 실패...");
-			moveURL = "index.jsp";
+			moveURL = "html5up-aerial/index.jsp";
 		}
 		return moveURL;
 	}

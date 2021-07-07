@@ -865,6 +865,9 @@ body {
   -ms-transition: top 0.15s ease-in-out;
   transition: top 0.15s ease-in-out;
 }
+#opener{
+	display: flex;
+}
 
 #nav li > ul {
   display: none;
